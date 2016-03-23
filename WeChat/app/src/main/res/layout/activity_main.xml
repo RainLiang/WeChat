@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPageBg"
+    tools:context=".activity.MainActivity">
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/vpager_main"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#30000000"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="5dp"
+        />
+    <RadioGroup
+        android:id="@+id/rg_tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/rb_weixin"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/tab_menu_weixin"
+            android:checked="true"
+            android:text="@string/navigation_weixin" />
+        <RadioButton
+            android:id="@+id/rb_address"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/tab_menu_address"
+            android:text="@string/navigation_address" />
+        <RadioButton
+            android:id="@+id/rb_discover"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/tab_menu_discover"
+            android:text="@string/navigation_discover" />
+        <RadioButton
+            android:id="@+id/rb_settings"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/tab_menu_settings"
+            android:text="@string/navigation_settings"/>
+    </RadioGroup>
+</LinearLayout>
