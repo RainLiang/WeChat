@@ -16,7 +16,7 @@ public class WeChatDatabaseHelper extends SQLiteOpenHelper
     private final String CREATE_USER_TABLE=
             "create table user(id varchar(255)," +
                     "username varchar(255)," +
-                    "displayPath varchar(255),";
+                    "displayPath varchar(255))";
     private final String CREATE_MESSAGE_TABLE=
             "create table message(fromID varchar(255)," +
                     "toID varchar(255)," +
@@ -25,13 +25,13 @@ public class WeChatDatabaseHelper extends SQLiteOpenHelper
                     "imageContentPath varchar(255)," +
                     "timeContent varchar(255)," +
                     "soundContentPath varchar(255)," +
-                    "createTime varchar(255)";
+                    "createTime varchar(255))";
     private final String CREATE_LATEST_TABLE=
             "create table latest(userID varchar(255)," +
                     "fromID varchar(255)," +
                     "textContent varchar(255)," +
                     "contentType varchar(255)," +
-                    "updateTime varchar(255)";
+                    "updateTime varchar(255))";
 
     public WeChatDatabaseHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, null, version);

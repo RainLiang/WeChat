@@ -1,12 +1,13 @@
 package com.vincentliong.model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 
 /**
  * Created by RongMa on 16/3/24.
  */
-public class User {
+public class User implements Serializable {
     private String userId;       //用户id
     private String userName;     //用户名
     private String displayPath;    //头像
@@ -14,10 +15,10 @@ public class User {
     public User() {
     }
 
-    public User(String displayPath, ArrayList<String> friends, String userId, String userName) {
-        this.displayPath = displayPath;
+    public User(String userId, String userName, String displayPath) {
         this.userId = userId;
         this.userName = userName;
+        this.displayPath = displayPath;
     }
 
     public String getUserId() {

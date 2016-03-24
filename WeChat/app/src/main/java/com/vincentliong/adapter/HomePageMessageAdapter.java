@@ -80,7 +80,7 @@ public class HomePageMessageAdapter extends BaseAdapter
 
         //处理最近一条的时间
         showTime(message,viewHolder);
-        return null;
+        return convertView;
     }
 
     /**
@@ -88,7 +88,7 @@ public class HomePageMessageAdapter extends BaseAdapter
      */
     private void showTime(LatestMessage message, ViewHolder viewHolder) {
         String timeText = message.getUpdateTime();
-        viewHolder.tvUserName.setText(TimeUtils.getTimeText(timeText));
+        viewHolder.tvTime.setText(TimeUtils.getTimeText(timeText));
     }
 
     //处理最新一条信息
@@ -131,13 +131,13 @@ public class HomePageMessageAdapter extends BaseAdapter
     {
                 //加载头像
                 Glide.with(context)
-                        .load("")
+                        .load(R.drawable.jingjing_display)
                         .placeholder(R.drawable.tab_address_pressed)
                         .into(viewHolder.ivDisplay);
                 //获取昵称
                 if(viewHolder.tvUserName != null)
                 {
-                    viewHolder.tvUserName.setText("");
+                    viewHolder.tvUserName.setText("婧婧");
                 }
     }
 }

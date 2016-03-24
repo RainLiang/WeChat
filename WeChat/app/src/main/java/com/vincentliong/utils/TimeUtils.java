@@ -1,5 +1,7 @@
 package com.vincentliong.utils;
 
+import android.util.Log;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -34,7 +36,7 @@ public class TimeUtils
             Date webDate = sdf.parse(timeFromWeb);
             long webTime = BigNumberUtils.getlongDivide(webDate.getTime(), 1000l, 0);
             long timeNow = BigNumberUtils.getlongDivide(System.currentTimeMillis(), 1000l, 0);
-            String dateNowText = sdf.format(new Date(timeNow));
+            String dateNowText = sdf.format(new Date(System.currentTimeMillis()));
             int nowTimeDay = Integer.parseInt(dateNowText.substring(8, 10));
             int nowTimeYear = Integer.parseInt(dateNowText.substring(0,4));
             if(BigNumberUtils.getlongSub(timeNow,webTime) <= 60*60*24)
@@ -71,5 +73,16 @@ public class TimeUtils
             e.printStackTrace();
         }
         return "";
+    }
+
+    /**
+     * 将Long类型的数据,转换为字符串
+     * @param timeNum
+     * @return
+     */
+    public static String getTimeTextByLong(long timeNum)
+    {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        return sdf.format(new Date(timeNum));
     }
 }
