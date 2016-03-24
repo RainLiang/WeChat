@@ -22,6 +22,7 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 
 
+
 /**
  * 思路:
  * 滑动页面的时候,在ViewPager页面切换的时候,设置RadioGroup的条目选择
