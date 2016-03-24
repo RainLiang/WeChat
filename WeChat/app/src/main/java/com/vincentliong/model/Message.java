@@ -15,16 +15,16 @@ public class Message
     private String soundContentPath; //声音内容
     private String createdTime; //信息创建时间
 
-    public Message(String contentType, String createdTime, String fromId,
-                   String imageContentPath, String soundContentPath, String textContent, String timeContent, String toId) {
-        this.contentType = contentType;
-        this.createdTime = createdTime;
+    public Message(String fromId, String toId, String contentType, String textContent,
+                   String imageContentPath, String timeContent, String soundContentPath, String createdTime) {
         this.fromId = fromId;
-        this.imageContentPath = imageContentPath;
-        this.soundContentPath = soundContentPath;
-        this.textContent = textContent;
-        this.timeContent = timeContent;
         this.toId = toId;
+        this.contentType = contentType;
+        this.textContent = textContent;
+        this.imageContentPath = imageContentPath;
+        this.timeContent = timeContent;
+        this.soundContentPath = soundContentPath;
+        this.createdTime = createdTime;
     }
 
     public Message(){}

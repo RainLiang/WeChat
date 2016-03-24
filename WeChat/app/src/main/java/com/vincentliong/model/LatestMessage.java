@@ -15,7 +15,7 @@ public class LatestMessage
     public LatestMessage() {
     }
 
-    public LatestMessage(String contentType, String fromId, String textContent, String updateTime, String userId) {
+    public LatestMessage(String userId,String fromId, String textContent,String contentType, String updateTime) {
         this.contentType = contentType;
         this.fromId = fromId;
         this.textContent = textContent;

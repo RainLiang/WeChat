@@ -10,14 +10,12 @@ public class User {
     private String userId;       //用户id
     private String userName;     //用户名
     private String displayPath;    //头像
-    private ArrayList<String> friends;  //好友id
 
     public User() {
     }
 
     public User(String displayPath, ArrayList<String> friends, String userId, String userName) {
         this.displayPath = displayPath;
-        this.friends = friends;
         this.userId = userId;
         this.userName = userName;
     }
@@ -45,13 +43,4 @@ public class User {
     public void setDisplayPath(String displayPath) {
         this.displayPath = displayPath;
     }
-
-    public ArrayList<String> getFriends() {
-        return friends;
-    }
-
-    public void setFriends(ArrayList<String> friends) {
-        this.friends = friends;
-    }
-
 }
